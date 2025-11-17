@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="vue/javascript/localDate.js"></script>
+    <title>Reserv'online</title>
+</head>
+<body class="font-mono">
+    <header>
+        <a href="vue/html/login.html" class="absolute top-1 right-1 backdrop-blur-sm p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="orange" class="size-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+        </a>
+    </header>
+    <div class="bg-[url(https://images.pexels.com/photos/163255/sunrise-sun-morgenrot-skies-163255.jpeg)] bg-cover w-auto h-screen flex flex-col justify-center items-center p-[1vh]">
+        <img src="vue/images/logo_Reserv_Online.svg" class="w-9/10 mb-5 sm:w-8/10" alt="Logo de la société Reserv'Online. Mot 'reserv' à gauche en jaune, mot 'online' à droite en orange et un avion au décollage entre les deux en organe">
+        <p class="text-xl text-amber-400 backdrop-blur-sm p-3 rounded-full sm:text-3xl">Réservation de voyages en ligne</p>
+        <div class="animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+        </div>
+        <div class="h-2/5 w-19/20 sm:h-auto rounded-xl sm:rounded-full bg-white inset-shadow-sm py-2 inset-shadow-orange-500 flex place-content-evenly flex-row flex-wrap">
+            <div class="sm:h-1/10">
+                <p>Type de réservation:</p>
+                <select name="travelType" id="travelType">
+                    <option value="none">Sélectionnez</option>
+                    <option value="fly">Vol</option>
+                    <option value="room">Hôtel</option>
+                    <option value="activity">Activité</option>
+                </select>
+            </div>
+            <textarea name="search" id="search" rows="1" class="resize-none sm:w-1/6 inset-shadow-sm inset-shadow-zinc-300 px-1" placeholder="Recherchez une ville ou une activité" required></textarea>
+            <div>
+                <p>Date de départ</p>
+                <input type="date" name="departureDate" id="dDate" required>
+            </div>
+            <div>
+                <p>Date de retour</p>
+                <input type="date" name="leavingDate" id="lDate" required>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
